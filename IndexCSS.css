@@ -646,11 +646,6 @@ body {
   .row {   
     flex-direction: column;
   }
-  .img {
-	width: 100%;
-	padding: 0px;
-	text-align: center;
-	}
 }
 
 @media only screen and (max-device-width: 1366px) {
