@@ -714,7 +714,7 @@ body {
   }
 }
 
-@media screen and (max-device-width: 1366px) {
+@media screen and (max-device-width: 900px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
     position: absolute;
@@ -728,16 +728,16 @@ body {
   }
 }
 
-@media screen and (max-device-width: 1366px) {
+@media screen and (max-device-width: 900px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+  	font-size: 40px;
+  	top: 15px;
+  	right: 35px;
   }
 }
 
-@media screen and (max-device-width: 1366px) {
+@media screen and (max-device-width: 900px) {
 	.carousel {
 		margin: auto;
 		margin-left: -5%;
