@@ -700,28 +700,6 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-  .activityContainer {
-	position: sticky;
-	width: 460px;
-	left: 50%;
-	margin: auto;
-	display: flex;
-	}
-	.activitycard {
-	margin: auto;
-	display: flex;
-	height: 150px;
-	width: 130px;
-	background-color: #17141d;
-	border-radius: 10px;
-	box-shadow: -1rem 0 1rem #000;
-	transition: 0.4s ease-out;
-	position: relative;
-	left: 0px;
-	}
-}
-
-@media only screen and (max-width: 900px) {
   .navbar a {display: none;}
   .navbar a.icon {
     float: right;
