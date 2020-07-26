@@ -646,7 +646,7 @@ body {
 
 /*Resizing*/
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .row {   
     flex-direction: column;
   }
@@ -657,7 +657,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .aboutMe{
 	  text-align: center;
   }
@@ -670,7 +670,7 @@ body {
 
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
 	.projectcolumn1, .projectcolumn2 {
 		width: 100%;
 		text-align: center;
@@ -680,7 +680,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .activityContainer {
 	position: sticky;
 	width: 460px;
@@ -699,7 +699,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .activityContainer {
 	position: sticky;
 	width: 460px;
@@ -721,7 +721,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .navbar a {display: none;}
   .navbar a.icon {
     float: right;
@@ -729,7 +729,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
     position: absolute;
@@ -743,7 +743,7 @@ body {
   }
 }
 
-@media screen and (max-height: 1000px) {
+@media only screen and (max-height: 1000px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
   font-size: 40px;
@@ -752,7 +752,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
 	.carousel {
 		margin: auto;
 		margin-left: -5%;
