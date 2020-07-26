@@ -643,6 +643,7 @@ body {
 	transform: translateX(0);
 }
 
+/* Resizing */
 
 @media screen and (max-width: 1000px) {
   .row {   
@@ -654,6 +655,7 @@ body {
 	text-align: center;
 	}
  .aboutMe{
+	margin: auto;
 	text-align: center;
 	padding: 1%;
   }
@@ -678,6 +680,7 @@ body {
 
 @media screen and (max-width: 1000px) {
   .activityContainer {
+	margin: auto;
 	position: sticky;
 	width: 460px;
 	top: 50%;
