@@ -644,9 +644,7 @@ body {
 }
 
 
-/*Resizing*/
-
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .row {   
     flex-direction: column;
   }
@@ -655,37 +653,36 @@ body {
 	padding: 0px;
 	text-align: center;
 	}
-}
-
-@media only screen and (max-width: 900px) {
-  .aboutMe{
-	  text-align: center;
+ .aboutMe{
+	text-align: center;
+	padding: 1%;
   }
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-device-width: 1366px) {
   .parallax {
     background-attachment: scroll;
   }
 
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	.projectcolumn1, .projectcolumn2 {
-		width: 100%;
-		text-align: center;
+	width: 100%;
+	text-align: center;
 	}
 	.projectcontainer {
-		padding: 5px;	
+	padding: 5px;	
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .activityContainer {
 	position: sticky;
 	width: 460px;
 	top: 50%;
 	left: 50%;
+	overflow-x:hidden;
 	}
 	.activitycard {
 	display: flex;
@@ -699,7 +696,7 @@ body {
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .navbar a {display: none;}
   .navbar a.icon {
     float: right;
@@ -707,7 +704,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
     position: absolute;
@@ -721,7 +718,7 @@ body {
   }
 }
 
-@media only screen and (max-height: 900px) {
+@media screen and (max-height: 1000px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
   font-size: 40px;
@@ -730,7 +727,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	.carousel {
 		margin: auto;
 		margin-left: -5%;
