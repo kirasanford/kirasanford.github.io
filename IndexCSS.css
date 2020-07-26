@@ -644,8 +644,14 @@ body {
 }
 
 /* Resizing */
+@media screen and (max-device-width: 900px) {
+	body {
+	margin: 0;
+    	overflow-x:hidden;
+	}
+}
 
-@media screen and (max-device-width: 1366px) {
+@media screen and (max-device-width: 900px) {
   .row {   
     flex-direction: column;
   }
@@ -661,11 +667,10 @@ body {
   }
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 900px) {
   .parallax {
     background-attachment: scroll;
   }
-
 }
 
 @media screen and (max-device-width: 1366px) {
