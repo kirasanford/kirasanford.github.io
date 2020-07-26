@@ -11,7 +11,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	background: #AFAFAB;
 	margin: 0;
-    overflow-x:hidden;
+   	overflow-x:hidden;
 }
 
 .navbar {
@@ -21,11 +21,11 @@ body {
 
 .navbar a {
 	float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
+    	display: block;
+   	color: #f2f2f2;
+    	text-align: center;
 	padding: 14px 25px;
-    text-decoration: none;
+    	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .navbar a.active {
 	background-color: #4CAF50;
-    color: white;
+    	color: white;
 }
 
 .navbar a.right {
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar .icon {
-  display: none;
+  	display: none;
 }
 
 .overlay {
@@ -87,10 +87,10 @@ body {
 }
 
 .overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  	position: absolute;
+	top: 20px;
+  	right: 45px;
+  	font-size: 60px;
 }
 
 .header {
@@ -687,7 +687,7 @@ body {
 
 @media screen and (max-device-width: 1366px) {
   .activityContainer {
-	margin: auto;
+	margin: 0;
 	position: sticky;
 	width: 460px;
 	top: 50%;
@@ -703,6 +703,8 @@ body {
 	box-shadow: -1rem 0 1rem #000;
 	transition: 0.4s ease-out;
 	position: relative;
+	margin: 0;
+    	overflow-x:hidden;
 	}
 }
 
@@ -738,10 +740,10 @@ body {
 }
 
 @media screen and (max-device-width: 900px) {
-	.carousel {
-		margin: auto;
-		margin-left: -5%;
-		margin-top: -15px;
-		max-width: 100%;
-	}
+  .carousel {
+	margin: auto;
+	margin-left: -5%;
+	margin-top: -15px;
+	max-width: 100%;
+  }
 }
