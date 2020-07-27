@@ -686,7 +686,7 @@ body {
 	}
 }
 
-@media screen and (max-device-width: 900px) {
+@media screen and (max-device-width: 700px) {
   .activityContainer {
 	margin: 0;
 	position: sticky;
@@ -704,12 +704,8 @@ body {
 	box-shadow: -1rem 0 1rem #000;
 	transition: 0.4s ease-out;
 	position: relative;
-	margin: 0;
     	overflow-x:hidden;
 	}
-	.activitycard:not(:first-child) {
-	margin-left: -100px;
-}
 }
 
 @media screen and (max-device-width: 1366px) {
