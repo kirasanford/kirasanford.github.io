@@ -291,8 +291,6 @@ body {
 
 /* Activities Cards */
 
-/* Activities Cards */
-
 @keyframes display {
 	0% {
 		transform: translateX(200px);
@@ -351,64 +349,6 @@ img:nth-child(5) {
 	top: 50%;
 	left: 20%;
 	display: flex;
-}
-
-.activitycard {
-	display: flex;
-	height: 280px;
-	width: 200px;
-	background-color: #17141d;
-	border-radius: 10px;
-	box-shadow: -1rem 0 1rem #000;
-	transition: 0.4s ease-out;
-	position: relative;
-}
-
-.activitycard:not(:first-child) {
-	margin-left: -50px;
-}
-
-.activitycard:hover {
-    -webkit-transition: all 0.5s;
-	transform: translateY(-20px);
-	transition: 0.4s ease-out;
-}
-
-.activitycard:hover ~ .card {
-	position: relative;
-	left: 50px;
-	transition: 0.4s ease-out;
-}
-
-.activitytitle {
-	color: white;
-	position: absolute;
-	left: 10%;
-	top: 10%;
-}
-
-.stroke {
-	stroke: white;
-	stroke-dasharray: 360;
-	stroke-dashoffset: 360;
-	transition: 0.6s ease-out;
-}
-
-/* Dark background for activities on hover  */
-
-.actPic:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-	border-radius: 10px;
-    background:rgba(0,0,0,0.5);
-    opacity:0;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-}
-
-.actPic:hover:after {
-    opacity:1;
 }
 
 /* Project page format */
@@ -721,11 +661,11 @@ img:nth-child(5) {
   }
 }
 
-@media only screen and (max-device-width: 900px) {
+/* @media only screen and (max-device-width: 900px) {
   .parallax {
     background-attachment: scroll;
   }
-}
+} */
 
 @media screen and (max-device-width: 900px) {
 	.projectcolumn1, .projectcolumn2 {
