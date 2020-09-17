@@ -1,5 +1,5 @@
 body, html {
-    	height: 100%;
+    height: 100%;
 	scroll-behavior: smooth;
 }
 
@@ -11,7 +11,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	background: #AFAFAB;
 	margin: 0;
-    	overflow-x:hidden;
+   	overflow-x:hidden;
 }
 
 .navbar {
@@ -22,7 +22,7 @@ body {
 .navbar a {
 	float: left;
     	display: block;
-    	color: #f2f2f2;
+   	color: #f2f2f2;
     	text-align: center;
 	padding: 14px 25px;
     	text-decoration: none;
@@ -57,6 +57,11 @@ body {
 	left: 0;
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0, 0.9);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("images/desk2.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	overflow-x: hidden;
 	transition: 0.5s;
 }
@@ -74,6 +79,8 @@ body {
 	text-decoration: none;
 	font-size: 36px;
 	color: #818181;
+	font-size: 40px;
+	color: #fff;
 	display: block;
 	transition: 0.3s;
 }
@@ -87,6 +94,14 @@ body {
 	top: 20px;
 	right: 45px;
 	font-size: 60px;
+	color: gray;
+}
+
+.overlay .closebtn {
+  	position: absolute;
+	top: 20px;
+  	right: 45px;
+  	font-size: 60px;
 }
 
 .header {
@@ -195,7 +210,7 @@ body {
 
 .aboutMe {
 	font-size: 110%;
-	padding: 60px;
+	padding: 20px;
 	display: -ms-flexbox; /* IE10 */
 	display: flex;
 	-ms-flex-wrap: wrap; /* IE10 */
@@ -205,7 +220,7 @@ body {
 .sidebar {
 	-ms-flex: 25%; /* IE10 */
 	flex: 25%;
-	padding: 10px;
+
 }
 
 .main {   
@@ -215,10 +230,7 @@ body {
 }
 
 .img {
-	width: 100%;
-	padding: 13% 0;
-	text-align: center;
-
+	padding: 5% 0;
 }
 
 /* View other pages buttons */
@@ -319,7 +331,7 @@ body {
 
 .pic-ctn > img {
 	position: absolute;
-	left: calc(50% - 9%);
+	left: calc(50% - 125px);
 	opacity: 0;
 	animation: display 12s infinite;
 }
@@ -623,6 +635,13 @@ img:nth-child(5) {
 	transform: translateX(0);
 }
 
+/* Resizing */
+@media screen and (max-device-width: 900px) {
+	body {
+	margin: 0;
+    	overflow-x:hidden;
+	}
+}
 
 /*Resizing*/
 
@@ -632,17 +651,33 @@ img:nth-child(5) {
 		width: 100%;
 		padding: 0px;
 		text-align: center;
+@media screen and (max-device-width: 900px) {
+	.row {flex-direction: column;}
+	.img {
+		width: 100%;
+		padding: 0px;
+		text-align: center;
 	}
+	.aboutMe{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1%;
+  }
 }
 
 @media only screen and (max-device-width: 1366px) {
 	.parallax {background-attachment: scroll;}
+@media only screen and (max-device-width: 900px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 900px) {
 	.projectcolumn1, .projectcolumn2 {
-		width: 100%;
-		text-align: center;
+	width: 100%;
+	text-align: center;
 	}
 	.projectcontainer {padding: 5px;}
 }
@@ -676,13 +711,71 @@ img:nth-child(5) {
 	  top: 15px;
 	  right: 35px;
 	}
+	.projectcontainer {
+	padding: 5px;
+	width: 100%;
+	overflow-x:hidden;
+	text-align: center;
+	}
 }
 
-@media screen and (max-width: 1000px) {
-	.carousel {
-		margin: auto;
-		margin-left: -5%;
-		margin-top: -15px;
-		max-width: 100%;
+@media screen and (max-width: 480px) {
+  .activityContainer {
+	margin: auto;
+	width: 460px;
+	top: 50%;
+	left: 50%;
+	overflow-x:hidden;
 	}
+	.activitycard {
+	display: flex;
+	height: 150px;
+	width: 130px;
+	background-color: #17141d;
+	border-radius: 10px;
+	box-shadow: -1rem 0 1rem #000;
+	transition: 0.4s ease-out;
+	position: relative;
+	overflow-x:hidden;
+	}
+}
+
+@media screen and (max-device-width: 1366px) {
+  .navbar a {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-device-width: 900px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-device-width: 900px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  	font-size: 40px;
+  	top: 15px;
+  	right: 35px;
+  }
+}
+
+@media screen and (max-device-width: 900px) {
+  .carousel {
+	margin: auto;
+	margin-left: -5%;
+	margin-top: -15px;
+	max-width: 100%;
+  }
 }
