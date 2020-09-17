@@ -56,7 +56,6 @@ body {
 	top: 0;
 	left: 0;
 	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0, 0.9);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("images/desk2.jpg");
 	height: 100%;
 	background-position: center;
@@ -77,8 +76,6 @@ body {
 .overlay a {
 	padding: 8px;
 	text-decoration: none;
-	font-size: 36px;
-	color: #818181;
 	font-size: 40px;
 	color: #fff;
 	display: block;
@@ -86,14 +83,6 @@ body {
 }
 
 .overlay a:hover, .overlay a:focus {
-	color: #f1f1f1;
-}
-
-.overlay .closebtn {
-	position: absolute;
-	top: 20px;
-	right: 45px;
-	font-size: 60px;
 	color: gray;
 }
 
@@ -210,7 +199,7 @@ body {
 
 .aboutMe {
 	font-size: 110%;
-	padding: 20px;
+	padding: 60px;
 	display: -ms-flexbox; /* IE10 */
 	display: flex;
 	-ms-flex-wrap: wrap; /* IE10 */
@@ -220,7 +209,7 @@ body {
 .sidebar {
 	-ms-flex: 25%; /* IE10 */
 	flex: 25%;
-
+	padding: 10px;
 }
 
 .main {   
@@ -230,7 +219,10 @@ body {
 }
 
 .img {
-	padding: 5% 0;
+	width: 100%;
+	padding: 13% 0;
+	text-align: center;
+
 }
 
 /* View other pages buttons */
@@ -262,10 +254,12 @@ body {
 	border: 2px solid #3B8C77;
 }
 
+
 /* Activities index header */
 
-.activities {   	
-	padding-bottom: 70px;
+.activities {   
+	padding-top: 10px;	
+	padding-bottom: 60px;
 }
 
 .ml14 {
@@ -294,6 +288,8 @@ body {
 	display: inline-block;
 	line-height: 1em;
 }
+
+/* Activities Cards */
 
 /* Activities Cards */
 
@@ -347,6 +343,72 @@ img:nth-child(4) {
 }
 img:nth-child(5) {
 	animation-delay: 12s;
+}
+
+.activityContainer {
+	position: sticky;
+	width: 600px;
+	top: 50%;
+	left: 20%;
+	display: flex;
+}
+
+.activitycard {
+	display: flex;
+	height: 280px;
+	width: 200px;
+	background-color: #17141d;
+	border-radius: 10px;
+	box-shadow: -1rem 0 1rem #000;
+	transition: 0.4s ease-out;
+	position: relative;
+}
+
+.activitycard:not(:first-child) {
+	margin-left: -50px;
+}
+
+.activitycard:hover {
+    -webkit-transition: all 0.5s;
+	transform: translateY(-20px);
+	transition: 0.4s ease-out;
+}
+
+.activitycard:hover ~ .card {
+	position: relative;
+	left: 50px;
+	transition: 0.4s ease-out;
+}
+
+.activitytitle {
+	color: white;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+}
+
+.stroke {
+	stroke: white;
+	stroke-dasharray: 360;
+	stroke-dashoffset: 360;
+	transition: 0.6s ease-out;
+}
+
+/* Dark background for activities on hover  */
+
+.actPic:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+	border-radius: 10px;
+    background:rgba(0,0,0,0.5);
+    opacity:0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+
+.actPic:hover:after {
+    opacity:1;
 }
 
 /* Project page format */
@@ -643,31 +705,22 @@ img:nth-child(5) {
 	}
 }
 
-/*Resizing*/
-
-@media screen and (max-width: 700px) {
-	.row {flex-direction: column;}
-	.img {
-		width: 100%;
-		padding: 0px;
-		text-align: center;
 @media screen and (max-device-width: 900px) {
-	.row {flex-direction: column;}
-	.img {
-		width: 100%;
-		padding: 0px;
-		text-align: center;
+  .row {   
+    flex-direction: column;
+  }
+  .img {
+	width: 100%;
+	padding: 0px;
+	text-align: center;
 	}
-	.aboutMe{
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 1%;
+ .aboutMe{
+	margin: auto;
+	text-align: center;
+	padding: 1%;
   }
 }
 
-@media only screen and (max-device-width: 1366px) {
-	.parallax {background-attachment: scroll;}
 @media only screen and (max-device-width: 900px) {
   .parallax {
     background-attachment: scroll;
@@ -678,38 +731,6 @@ img:nth-child(5) {
 	.projectcolumn1, .projectcolumn2 {
 	width: 100%;
 	text-align: center;
-	}
-	.projectcontainer {padding: 5px;}
-}
-
-@media screen and (max-width: 600px) {
-	.navbar a {display: none;}
-	.navbar a.icon {
-		float: right;
-		display: block;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.navbar.responsive {position: relative;}
-	.navbar.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	.navbar.responsive a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-}
-
-@media screen and (max-height: 600px) {
-	.overlay a {font-size: 20px}
-	.overlay .closebtn {
-	  font-size: 40px;
-	  top: 15px;
-	  right: 35px;
 	}
 	.projectcontainer {
 	padding: 5px;
