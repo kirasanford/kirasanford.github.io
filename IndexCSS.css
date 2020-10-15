@@ -667,7 +667,7 @@ img:nth-child(5) {
   }
 } */
 
-@media screen and (max-device-width: 900px) {
+@media screen and (max-device-width: 600px) {
 	.projectcolumn1, .projectcolumn2 {
 	width: 100%;
 	text-align: center;
