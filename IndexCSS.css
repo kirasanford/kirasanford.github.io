@@ -222,7 +222,6 @@ body {
 	width: 100%;
 	padding: 13% 0;
 	text-align: center;
-
 }
 
 /* View other pages buttons */
@@ -253,7 +252,6 @@ body {
 	color: #1F2322;
 	border: 2px solid #3B8C77;
 }
-
 
 /* Activities index header */
 
@@ -313,6 +311,7 @@ body {
 		opacity: 0;
 	}
 }
+
 .pic {
 	width: 250px;
 	height: 350px;
@@ -628,10 +627,12 @@ img:nth-child(5) {
 /* Resizing */
 
 @media screen and (max-device-width: 1000px) {
+	.projectImg {
+    		margin: auto;
+  	}
 	.zigzag-item {
 		width: 100%;
 		margin: 0;
-		object-align: center;
 	}
 	.zigzag{
 		flex-direction: column !important;
@@ -662,19 +663,6 @@ img:nth-child(5) {
 	text-align: center;
 	padding: 1%;
   }
-}
-
-@media screen and (max-device-width: 600px) {
-	.projectcolumn1, .projectcolumn2 {
-	width: 100%;
-	text-align: center;
-	}
-	.projectcontainer {
-	padding: 5px;
-	width: 100%;
-	overflow-x:hidden;
-	text-align: center;
-	}
 }
 
 @media screen and (max-width: 480px) {
