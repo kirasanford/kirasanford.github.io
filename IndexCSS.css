@@ -636,6 +636,10 @@ img:nth-child(5) {
 	}
 	.zigzag{
 		flex-direction: column !important;
+		padding: 5px;
+		width: 100%;
+		text-align: center;
+		overflow-x:hidden;
 	}
 }
 
