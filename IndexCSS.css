@@ -115,6 +115,10 @@ body {
 	padding-right: 280px;
 }
 
+.icons{
+	text-align:left;
+}
+
 .header2 {
 	text-align: center;
 	background-color: black;
@@ -276,69 +280,6 @@ body {
 .ml14 .letter {
 	display: inline-block;
 	line-height: 1em;
-}
-
-/* Activities Cards */
-
-@keyframes display {
-	0% {
-		transform: translateX(200px);
-		opacity: 0;
-	}
-	10% {
-		transform: translateX(0);
-		opacity: 1;
-	}
-	20% {
-		transform: translateX(0);
-		opacity: 1;
-	}
-	30% {
-		transform: translateX(-200px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(-200px);
-		opacity: 0;
-	}
-}
-
-.pic {
-	width: 250px;
-	height: 350px;
-}
-
-.pic-ctn {
-	position: relative;
-	height: 300px;
-}
-
-.pic-ctn > img {
-	position: absolute;
-	left: calc(50% - 125px);
-	opacity: 0;
-	animation: display 12s infinite;
-}
-
-img:nth-child(2) {
-	animation-delay: 3s;
-}
-img:nth-child(3) {
-	animation-delay: 6s;
-}
-img:nth-child(4) {
-	animation-delay: 9s;
-}
-img:nth-child(5) {
-	animation-delay: 12s;
-}
-
-.activityContainer {
-	position: sticky;
-	width: 600px;
-	top: 50%;
-	left: 20%;
-	display: flex;
 }
 
 /* Project page format */
@@ -636,15 +577,18 @@ img:nth-child(5) {
 
 @media screen and (max-device-width: 1000px) {
 	.parallax {
-   	 background-attachment: scroll;
+		background-attachment: scroll;
  	}
 	body {
-	margin: 0;
-    	overflow-x:hidden;
+		margin: 0;
+		overflow-x:hidden;
 	}
 }
 
 @media screen and (max-device-width: 1000px) {
+	.header {
+		background-attachment: scroll;
+	}
 	.homeText {
 		text-align: center;
 		position: absolute;
@@ -656,7 +600,15 @@ img:nth-child(5) {
 	.about{
 		text-align: center;
 		padding-right: 0px;
-}
+	}
+	.buttons {
+		margin: 0px;
+	}
+	.btn {
+		margin: 5px;
+	}
+	.icons{
+		text-align:center;
 	}
 }
 
