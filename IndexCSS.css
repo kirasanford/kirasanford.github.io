@@ -14,6 +14,10 @@ body {
    	overflow-x:hidden;
 }
 
+h1 {
+	font-family: 'Questrial', Sans-Serif;
+}
+
 .navbar {
 	overflow: hidden;
   	opacity: 0.8;
@@ -21,12 +25,12 @@ body {
 
 .navbar a {
 	float: left;
-    	display: block;
+    display: block;
    	color: #f2f2f2;
-    	text-align: center;
+    text-align: center;
 	padding: 14px 25px;
-    	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+	font-family: 'Questrial', Sans-Serif;
 }
 
 .navbar a:hover {
@@ -65,6 +69,7 @@ body {
 }
 
 .overlay-content {
+	font-family: 'Questrial', Sans-Serif;
 	position: relative;
 	top: 25%;
 	width: 100%;
@@ -73,12 +78,11 @@ body {
 }
 
 .overlay a {
-	padding: 8px;
+	padding: 10px;
 	text-decoration: none;
 	font-size: 40px;
 	color: #fff;
 	display: block;
-	transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -88,11 +92,11 @@ body {
 .overlay .closebtn {
   	position: absolute;
 	top: 20px;
-  	right: 45px;
-  	font-size: 60px;
+  	right: 20px;
+  	font-size: 40px;
 }
 
-.header {
+.homePage {
 	background: black;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("images/desk2.jpg");
 	height: 100%;
@@ -131,7 +135,7 @@ body {
 
 .header2text {
 	color: #fff;
-	padding: 90px;
+	padding: 5px 0 50px;
 	font-size: 3.5em;
 }
 
@@ -173,7 +177,6 @@ body {
 }
 
 .footerIcon {
-	font-family: 'Kanit', sans-serif;
 	text-align: center;
 }
 
@@ -308,7 +311,6 @@ body {
 
 .projectlink a{
 	color: #3B8C77;	
-	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	text-decoration: none;
 }
@@ -402,7 +404,7 @@ body {
 	width: calc(90% - 10px);
 }
 
-/* Carasoul */
+/* Carasoul for resume page*/
 
 .carousel {
 	margin-top: -60px;
@@ -576,18 +578,13 @@ body {
 }
 
 @media screen and (max-device-width: 1000px) {
-	.parallax {
-		background-attachment: scroll;
- 	}
 	body {
 		margin: 0;
 		overflow-x:hidden;
 	}
-}
-
-@media screen and (max-device-width: 1000px) {
-	.header {
+	.homePage {
 		background-attachment: scroll;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("images/desk2.jpg");
 	}
 	.homeText {
 		text-align: center;
@@ -595,7 +592,7 @@ body {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: white;
+		min-width: 275px;
 	}
 	.about{
 		text-align: center;
@@ -606,9 +603,12 @@ body {
 	}
 	.btn {
 		margin: 5px;
+		background-color: #3B8C77;
+		color: #1F2322;
 	}
 	.icons{
 		text-align:center;
+		font-size: 100%;
 	}
 }
 
