@@ -604,6 +604,7 @@ h1 {
 	.btn {
 		margin: 5px;
 		background-color: #3B8C77;
+		border: none;
 		color: #1F2322;
 	}
 	.icons{
