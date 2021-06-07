@@ -94,9 +94,9 @@ body {
 
 .header {
 	background: black;
-	background-attachment: scroll;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("images/desk2.jpg");
 	height: 100%;
+	background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
