@@ -56,26 +56,6 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.05em solid #ffffff }";
   document.body.appendChild(css);
 };
-
-// Animation for arrow pointing down
-var textWrapper = document.querySelector('.point');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='down'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.point .down',
-    translateY: [-100,0],
-    easing: "easeOutExpo",
-    duration: 1400,
-    delay: (el, i) => 50 * i
-  }).add({
-    targets: '.point',
-    opacity: 0,
-    duration: 3000,
-    easing: "easeOutExpo",
-    delay: 5000
-  });
-  
   
 //  animation for Activities: wrap every letter in a span
 var textWrapper = document.querySelector('.ml14 .letters');
@@ -108,39 +88,3 @@ function openNav() {
 function closeNav() {
   document.getElementById("navbar").style.width = "0%";
 }
-
-// Carousel images
-$(function(){
-  $('.carousel-item').eq(0).addClass('active');
-  var total = $('.carousel-item').length;
-  var current = 0;
-  $('#moveRight').on('click', function(){
-    var next=current;
-    current= current+1;
-    setSlide(next, current);
-  });
-  $('#moveLeft').on('click', function(){
-    var prev=current;
-    current = current- 1;
-    setSlide(prev, current);
-  });
-  function setSlide(prev, next){
-    var slide= current;
-    if(next>total-1){
-     slide=0;
-      current=0;
-    }
-    if(next<0){
-      slide=total - 1;
-      current=total - 1;
-    }
-           $('.carousel-item').eq(prev).removeClass('active');
-           $('.carousel-item').eq(slide).addClass('active');
-      setTimeout(function(){
-
-      },800);
-      
-    console.log('current '+current);
-    console.log('prev '+prev);
-  }
-});
