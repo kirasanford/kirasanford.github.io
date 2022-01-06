@@ -18,82 +18,169 @@ h1 {
 	font-family: 'Questrial', Sans-Serif;
 }
 
-.navbar {
-	overflow: hidden;
-  	opacity: 0.8;
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.navbar a {
-	float: left;
-    display: block;
-   	color: #f2f2f2;
-    text-align: center;
-	padding: 14px 25px;
-    text-decoration: none;
-	font-family: 'Questrial', Sans-Serif;
+ a, a:visited, a:hover, a:active {
+	 color: inherit;
+	 text-decoration: none;
 }
-
-.navbar a:hover {
-	background-color: #ddd;
-	color: black;
-	text-decoration: none;
-}
-
-.navbar a.active {
-	background-color: #4CAF50;
-    	color: white;
-}
-
-.navbar a.right {
-	float: right;
-}
-
-.navbar .icon {
-  	display: none;
-}
-
-.overlay {
-	height: 100%;
-	width: 0;
+ .navbar {
 	position: fixed;
-	z-index: 1;
+	font-family: 'Questrial', Sans-Serif;
+	top: 10vh;
+	left: 0;
+	z-index: 2;
+}
+ .navbar .checkbox-toggle {
+	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgb(0,0,0);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("images/desk2.jpg");
-	height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	overflow-x: hidden;
+	z-index: 3;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	opacity: 0;
+}
+ .navbar .checkbox-toggle:checked + .hamburger > div {
+	 transform: rotate(135deg);
+}
+ .navbar .checkbox-toggle:checked + .hamburger > div:before, .navbar .checkbox-toggle:checked + .hamburger > div:after {
+	 top: 0;
+	 transform: rotate(90deg);
+}
+ .navbar .checkbox-toggle:checked ~ .menu {
+	 pointer-events: auto;
+	 visibility: visible;
+}
+ .navbar .checkbox-toggle:checked ~ .menu > div {
+	 transform: scale(1);
+	 transition-duration: .75s;
+}
+ .navbar .checkbox-toggle:checked ~ .menu > div > div {
+	 opacity: 1;
+	 transition: opacity .4s ease .4s;
+}
+ .navbar .checkbox-toggle:checked:hover + .hamburger > div {
+	 transform: rotate(225deg);
+}
+ .navbar .hamburger {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 1;
+	 width: 60px;
+	 height: 60px;
+	 padding: .5em 1em;
+	 background: #3B8C77;
+	 box-shadow: 1px 1px 2px black;
+	 border-radius: 0 15% 15% 0;
+	 cursor: pointer;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 
+}
+ .navbar .hamburger > div {
+	 position: relative;
+	 flex: none;
+	 width: 100%;
+	 height: 2px;
+	 background: #FFF;
+	 transition: all .4s ease;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .navbar .hamburger > div:before, .navbar .hamburger > div:after {
+	 content: '';
+	 position: absolute;
+	 z-index: 1;
+	 top: -10px;
+	 left: 0;
+	 width: 100%;
+	 height: 2px;
+	 background: inherit;
+	 transition: all .5s ease;
+}
+ .navbar .hamburger > div:after {
+	 top: 10px;
+}
+ .navbar .menu {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 pointer-events: none;
+	 visibility: hidden;
+	 overflow: hidden;
+	 backface-visibility: hidden;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .navbar .menu > div {
+	width: 200vw;
+	height: 200vw;
+	color: #FFF;
+	background: #3B8C77;
+	opacity: 0.9;
+	transition: all .6s ease;
+	flex: none;
+	transform: scale(0);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+ .navbar .menu > div > div {
+	 text-align: center;
+	 max-width: 90vw;
+	 max-height: 100vh;
+	 transition: opacity .6s ease;
+	 overflow-y: auto;
+	 flex: none;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .navbar .menu > div > div > ul {
+	 list-style: none;
+	 padding: 0 1em;
+	 margin: 0;
+	 display: block;
+	 max-height: 100vh;
+}
+ .navbar .menu > div > div > ul > li {
+	 padding: 0;
+	 margin: 1em;
+	 font-size: 24px;
+	 display: block;
+}
+ .navbar .menu > div > div > ul > li > a {
+	 position: relative;
+	 display: inline;
+	 cursor: pointer;
+	 transition: color .4s ease;
 }
 
-.overlay-content {
-	font-family: 'Questrial', Sans-Serif;
-	position: relative;
-	top: 25%;
-	width: 100%;
-	text-align: center;
-	margin-top: 30px;
+ .navbar .menu > div > div > ul > li > a:hover:after {
+	 width: 100%;
 }
-
-.overlay a {
-	padding: 10px;
-	text-decoration: none;
-	font-size: 40px;
-	color: #fff;
-	display: block;
-}
-
-.overlay a:hover, .overlay a:focus {
-	color: gray;
-}
-
-.overlay .closebtn {
-  	position: absolute;
-	top: 20px;
-  	right: 20px;
-  	font-size: 40px;
+ .navbar .menu > div > div > ul > li > a:after {
+	 content: '';
+	 position: absolute;
+	 z-index: 1;
+	 bottom: -0.15em;
+	 left: 0;
+	 width: 0;
+	 height: 2px;
+	 background: #e5e5e5;
+	 transition: width .4s ease;
 }
 
 .homePage {
@@ -135,7 +222,8 @@ h1 {
 
 .header2text {
 	color: #fff;
-	padding: 5px 0 50px;
+	margin: 0;
+	padding: 1em;
 	font-size: 3.5em;
 }
 
@@ -162,22 +250,10 @@ h1 {
 	padding: 20px;
 }
 
-.footerText {
+.footerText, .footerText a, .footerIcon{
 	text-align: center;
-	color: white;
-}
-
-.footerText a {
-	color: white;
 	text-decoration: none;
-}
-
-.footerText a:hover {
-	text-decoration: underline;
-}
-
-.footerIcon {
-	text-align: center;
+	color: white;
 }
 
 .externalIcon {
