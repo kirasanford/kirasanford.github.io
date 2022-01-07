@@ -24,18 +24,20 @@ h1 {
 	justify-content: center;
 }
 
- a, a:visited, a:hover, a:active {
+a, a:visited, a:hover, a:active {
 	 color: inherit;
 	 text-decoration: none;
 }
- .navbar {
+
+.navbar {
 	position: fixed;
 	font-family: 'Questrial', Sans-Serif;
 	top: 10vh;
 	left: 0;
 	z-index: 2;
 }
- .navbar .checkbox-toggle {
+
+.navbar .checkbox-toggle {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -45,85 +47,96 @@ h1 {
 	height: 60px;
 	opacity: 0;
 }
- .navbar .checkbox-toggle:checked + .hamburger > div {
+
+.navbar .checkbox-toggle:checked + .hamburger > div {
 	 transform: rotate(135deg);
 }
- .navbar .checkbox-toggle:checked + .hamburger > div:before, .navbar .checkbox-toggle:checked + .hamburger > div:after {
+
+.navbar .checkbox-toggle:checked + .hamburger > div:before, .navbar .checkbox-toggle:checked + .hamburger > div:after {
 	 top: 0;
 	 transform: rotate(90deg);
 }
- .navbar .checkbox-toggle:checked ~ .menu {
+
+.navbar .checkbox-toggle:checked ~ .menu {
 	 pointer-events: auto;
 	 visibility: visible;
 }
- .navbar .checkbox-toggle:checked ~ .menu > div {
+
+.navbar .checkbox-toggle:checked ~ .menu > div {
 	 transform: scale(1);
 	 transition-duration: .75s;
 }
- .navbar .checkbox-toggle:checked ~ .menu > div > div {
-	 opacity: 1;
-	 transition: opacity .4s ease .4s;
+
+.navbar .checkbox-toggle:checked ~ .menu > div > div {
+	opacity: 1;
+	transition: opacity .4s ease .4s;
 }
- .navbar .checkbox-toggle:checked:hover + .hamburger > div {
-	 transform: rotate(225deg);
+
+.navbar .checkbox-toggle:checked:hover + .hamburger > div {
+	transform: rotate(225deg);
 }
- .navbar .hamburger {
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 z-index: 1;
-	 width: 60px;
-	 height: 60px;
-	 padding: .5em 1em;
-	 background: #3B8C77;
-	 box-shadow: 1px 1px 2px black;
-	 border-radius: 0 15% 15% 0;
-	 cursor: pointer;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 
+
+.navbar .hamburger {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 60px;
+	height: 60px;
+	padding: .5em 1em;
+	background: #3B8C77;
+	box-shadow: 1px 1px 2px black;
+	border-radius: 0 15% 15% 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
- .navbar .hamburger > div {
-	 position: relative;
-	 flex: none;
-	 width: 100%;
-	 height: 2px;
-	 background: #FFF;
-	 transition: all .4s ease;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
+
+.navbar .hamburger > div {
+	position: relative;
+	flex: none;
+	width: 100%;
+	height: 2px;
+	background: #FFF;
+	transition: all .4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
- .navbar .hamburger > div:before, .navbar .hamburger > div:after {
-	 content: '';
-	 position: absolute;
-	 z-index: 1;
-	 top: -10px;
-	 left: 0;
-	 width: 100%;
-	 height: 2px;
-	 background: inherit;
-	 transition: all .5s ease;
+
+.navbar .hamburger > div:before, .navbar .hamburger > div:after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: inherit;
+	transition: all .5s ease;
 }
- .navbar .hamburger > div:after {
-	 top: 10px;
+ 
+.navbar .hamburger > div:after {
+	top: 10px;
 }
- .navbar .menu {
-	 position: fixed;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 100%;
-	 pointer-events: none;
-	 visibility: hidden;
-	 overflow: hidden;
-	 backface-visibility: hidden;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
+
+.navbar .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	visibility: hidden;
+	overflow: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
- .navbar .menu > div {
+
+.navbar .menu > div {
 	width: 200vw;
 	height: 200vw;
 	color: #FFF;
@@ -137,17 +150,19 @@ h1 {
 	align-items: center;
 	justify-content: center;
 }
- .navbar .menu > div > div {
-	 text-align: center;
-	 max-width: 90vw;
-	 max-height: 100vh;
-	 transition: opacity .6s ease;
-	 overflow-y: auto;
-	 flex: none;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
+
+.navbar .menu > div > div {
+	text-align: center;
+	max-width: 90vw;
+	max-height: 100vh;
+	transition: opacity .6s ease;
+	overflow-y: auto;
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
  .navbar .menu > div > div > ul {
 	 list-style: none;
 	 padding: 0 1em;
