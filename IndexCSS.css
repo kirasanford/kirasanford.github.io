@@ -262,6 +262,7 @@ a, a:visited, a:hover, a:active {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin: 20vh 0 0 0;
 	padding: 20px;
 }
 
