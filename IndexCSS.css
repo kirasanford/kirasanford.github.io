@@ -233,6 +233,7 @@ a, a:visited, a:hover, a:active {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-bottom: 5vh;
 }
 
 .header2text {
@@ -262,7 +263,7 @@ a, a:visited, a:hover, a:active {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 10px 0 0 0;
+	margin: 0;
 	padding: 20px;
 }
 
@@ -343,40 +344,6 @@ a, a:visited, a:hover, a:active {
 	border: 2px solid #3B8C77;
 }
 
-/* Activities index header */
-
-.activities {   
-	padding-top: 10px;	
-	padding-bottom: 60px;
-}
-
-.ml14 {
-	font-weight: 200;
-	font-size: 3.2em;
-    text-align: center;
-}
-
-.ml14 .text-wrapper {
-	position: relative;
-	display: inline-block;
-}
-
-.ml14 .line {
-	opacity: 0;
-	position: absolute;
-	left: 0;
-	height: 2px;
-	width: 100%;
-	background-color: black;
-	transform-origin: 100% 100%;
-	bottom: 0;
-}
-
-.ml14 .letter {
-	display: inline-block;
-	line-height: 1em;
-}
-
 /* Project page format */
 
 .projectImg {
@@ -414,53 +381,31 @@ a, a:visited, a:hover, a:active {
 
 /* Resume Page Format */
 
-.row {
-	margin: 10px;
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: wrap; /* IE10 */
-	flex-wrap: wrap;
+.container {  
+	display: grid;
+	padding: 0vh 15vh;
+	grid-template-columns: 2.5fr 1fr;
+	grid-template-rows: 0.8fr 0.8fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+    "Resume Skillbar"
+    "Resume Photos";
 }
 
-.resumesidebar {
-	-ms-flex: 20%; /* IE10 */
-	flex: 20%;
-	margin-right: 13vh;
-}
+.Resume { grid-area: Resume;}
 
-.resumemain {   
-	-ms-flex: 70%; /* IE10 */
-	flex: 70%;
-	padding: 1vh 0 30px 12vh;
-	font-size: 18px;
-}
+.Skillbar { grid-area: Skillbar;}
 
-.resumemain h4 {   
-	font-family: 'Questrial', Sans-Serif;
-}
+.Photos { grid-area: Photos; padding-top: 5vh;}
+
 
 /* Skillset */
 
-@keyframes load{
-  from {
-    width: 0%
-  }
-}
-@-webkit-keyframes load{
-  from {
-    width: 0%
-  }
-}
-@-moz-keyframes load{
-  from {
-    width: 0%
-  }
-}
-@-o-keyframes load{
-  from {
-    width: 0%
-  }
-}
+@keyframes load{ from { width: 0% } }
+@-webkit-keyframes load{ from { width: 0% } }
+@-moz-keyframes load{ from { width: 0% } }
+@-o-keyframes load{ from { width: 0% } }
 
 .skillbar{
 	background-color: #000;
@@ -479,23 +424,13 @@ a, a:visited, a:hover, a:active {
 	-o-animation: load 3s 0s;
 }
 
-.skillbar.learning::before{
-	width: calc(15% - 10px);
-}
-.skillbar.basic::before{
-	width: calc(30% - 10px);
-}
-.skillbar.intermediate::before{
-	width: calc(60% - 10px);
-}
-.skillbar.advanced::before{
-	width: calc(80% - 10px);
-}
-.skillbar.expert::before{
-	width: calc(90% - 10px);
-}
+.skillbar.learning::before{ width: calc(15% - 10px); }
+.skillbar.basic::before{ width: calc(30% - 10px); }
+.skillbar.intermediate::before{ width: calc(60% - 10px); }
+.skillbar.advanced::before{ width: calc(80% - 10px); }
+.skillbar.expert::before{ width: calc(90% - 10px); }
 
-/* Slideshow */
+/* Resume Slideshow */
 @keyframes display {
   0% {
     transform: translateX(70px);
@@ -521,47 +456,30 @@ a, a:visited, a:hover, a:active {
 
 .pic {
 	position: relative;
-	width: 40vh;
-	height: 53vh;
+	width: 14em;
+	height: 18em;
 }
 
-.pic-ctn {
-  position: relative;
-  width: 50vh;
-  height: 300px;
-  margin-top: 10vh;
-}
+.pic-ctn { position: relative; }
 
 .pic-ctn > img {
-  position: absolute;
-  top: 0;
-  left: calc(46% - 100px);
-  opacity: 0;
-  animation: display 10s infinite;
+	position: absolute;
+	left: calc(50% - 100px);
+	opacity: 0;
+	animation: display 10s infinite;
 }
 
-img:nth-child(2) {
-  animation-delay: 2s;
-}
-img:nth-child(3) {
-  animation-delay: 4s;
-}
-img:nth-child(4) {
-  animation-delay: 6s;
-}
-img:nth-child(5) {
-  animation-delay: 8s;
-}
-img:nth-child(6) {
-  animation-delay: 10s;
-}
+img:nth-child(2) { animation-delay: 2s; }
+img:nth-child(3) { animation-delay: 4s; }
+img:nth-child(4) { animation-delay: 6s; }
+img:nth-child(5) { animation-delay: 8s; }
+img:nth-child(6) { animation-delay: 10s; }
+
 
 /* Resizing */
 
 @media screen and (max-device-width: 1000px) {
-	.projectImg {
-    	margin: auto;
-  	}
+	.projectImg { margin: auto;}
 	.zigzag-item {
 		width: 100%;
 		margin: 0;
@@ -609,15 +527,23 @@ img:nth-child(6) {
 		text-align:center;
 		font-size: 100%;
 	}
-	.footer{
-		margin: 20vh 0 0 0;
-	}
+	.container {  
+		display: grid;
+		margin-top: -20px;
+		padding: 0vh 5vh;
+		justify-content: center;
+		grid-auto-flow: none;
+		grid-template-columns: auto;
+		grid-template-rows: auto 4fr 3fr;
+		gap: 0px 0px;
+		grid-template-areas: 
+		"Resume"
+		"Skillbar"
+		"Photos"; 
+	}	
 }
 
 @media screen and (max-device-width: 900px) {
-  .row {   
-    flex-direction: column;
-  }
   .img {
 	width: 100%;
 	padding: 0px;
@@ -627,14 +553,6 @@ img:nth-child(6) {
 	margin: auto;
 	text-align: center;
 	padding: 1%;
-  }
-  .resumesidebar {
-	margin: 0;
-  }
-  .resumemain {   
-	padding: 0;
-	margin: 10px;  
-	text-align: center;
   }
 }
 
