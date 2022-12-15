@@ -229,7 +229,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .smallHeaderContainer {  
-	padding: 0 15vh 0 15vh;
+	padding: 5vh 15vh;
 }
 
 .header2text {
@@ -340,12 +340,17 @@ a, a:visited, a:hover, a:active {
 	border: 2px solid #3B8C77;
 }
 
-/* Project page format */
+/* Project section format */
+
+.Resume { grid-area: Resume;}
+
+.Skillbar { grid-area: Skillbar;}
+
 
  .projectContainer {
-	 max-width: 1044px;
+	 max-width: 1000px;
 	 margin: 0 auto;
-	 padding: 0 20px 50px 20px;
+	 padding: 0 20px 20px 20px;
 }
  .projects {
 	 display: block;
@@ -440,7 +445,7 @@ a, a:visited, a:hover, a:active {
 }
  .projects__slide div {
 	 position: relative;
-	 width: 100%;
+	 width: 70%;
 }
  .projects__slide div:before {
 	 display: block;
@@ -480,8 +485,8 @@ a, a:visited, a:hover, a:active {
 	 align-self: flex-center;
 	 padding: 30px;
 	 flex: 0 0 auto;
-	 width: 25%;
-	 min-width: 150px;
+	 width: 45%;
+	 min-width: 170px;
 }
  .projects__thumbnails {
 	 list-style: none;
@@ -549,11 +554,11 @@ a.projectlink::after{
 }
 
 
-/* Resume Page Format */
+/* Resume Format */
 
-.container {  
+.resumecontainer {  
 	display: grid;
-	padding: 10vh 15vh;
+	padding: 0 15vh;
 	grid-template-columns: 1fr 2.5fr;
 	grid-template-rows: 0.8fr;
 	gap: 0px 10vh;
@@ -633,7 +638,7 @@ a.projectlink::after{
 		text-align:center;
 		font-size: 100%;
 	}
-	.container {  
+	.resumecontainer {  
 		display: grid;
 		padding: 5vh;
 		justify-content: center;
