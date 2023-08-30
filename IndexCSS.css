@@ -12,7 +12,7 @@ body {
    	overflow-x:hidden;
 }
 
-h1, h2 { font-family: 'Questrial', Sans-Serif; }
+h1, h2, h4 { font-family: 'Questrial', Sans-Serif; }
 
 .flex-center {
 	display: flex;
@@ -229,7 +229,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .smallHeaderContainer {  
-	padding: 5vh 15vh;
+	padding: 3vh 21vh;
 }
 
 .header2text {
@@ -558,7 +558,7 @@ a.projectlink::after{
 
 .resumecontainer {  
 	display: grid;
-	padding: 0 15vh;
+	padding: 0 21vh;
 	grid-template-columns: 1fr 2.5fr;
 	grid-template-rows: 0.8fr;
 	gap: 0px 10vh;
@@ -596,10 +596,10 @@ a.projectlink::after{
 	-o-animation: load 3s 0s;
 }
 
-.skillbar.learning::before{ width: calc(15% - 10px); }
-.skillbar.basic::before{ width: calc(30% - 10px); }
-.skillbar.intermediate::before{ width: calc(60% - 10px); }
-.skillbar.advanced::before{ width: calc(80% - 10px); }
+.skillbar.java::before{ width: calc(80% - 10px); }
+.skillbar.javascript::before{ width: calc(70% - 10px); }
+.skillbar.sql::before{ width: calc(75% - 10px); }
+.skillbar.angular::before{ width: calc(80% - 10px); }
 .skillbar.expert::before{ width: calc(90% - 10px); }
 
 /* Resizing */
