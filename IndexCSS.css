@@ -663,6 +663,13 @@ a.projectlink::after{
 	text-align: center;
 	padding: 1%;
   }
+  .smallHeaderContainer {  
+	padding: 3vh 0vh;
+	text-align: center;
+  }
+  .resumecontainer {
+	padding-top: 0vh;
+  }
 }
 
 @media screen and (max-device-width: 900px) {
