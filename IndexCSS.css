@@ -44,6 +44,11 @@ a, a:visited, a:hover, a:active {
 	opacity: 0;
 }
 
+.navbar .checkbox-toggle:checked html{
+    height: 100%;
+    overflow: hidden;
+}
+
 .navbar .checkbox-toggle:checked + .hamburger > div {
 	 transform: rotate(135deg);
 }
