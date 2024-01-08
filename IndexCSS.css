@@ -235,6 +235,7 @@ a, a:visited, a:hover, a:active {
 
 .smallHeaderContainer {  
 	padding: 3vh 21vh;
+	text-align: center;
 }
 
 .header2text {
