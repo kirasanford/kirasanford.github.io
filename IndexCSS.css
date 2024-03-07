@@ -45,42 +45,13 @@ a, a:visited, a:hover, a:active {
 	color: white;
 }
 
-.icons{	text-align: center; }
-
-.header2 {
-	text-align: center;
-	background-color: black;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("images/desk2.jpg");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-bottom: 5vh;
+.icons{
+    text-align: center;
 }
 
 .smallHeaderContainer {  
 	padding: 3vh 21vh;
 	text-align: center;
-}
-
-.header2text {
-	color: #fff;
-	margin: 0;
-	padding: 1em;
-	font-size: 3.5em;
-}
-
-.header2text .text-wrapper {
-	position: relative;
-	display: inline-block;
-}
-
-.header2text .line {
-	position: absolute;
-	height: 110%;
-	width: 3px;
-	background-color: #fff;
-	transform-origin: 0 50%;
 }
 
 .footer {
@@ -370,25 +341,6 @@ a.projectlink::after{
     white-space: pre;
 }
 
-
-/* Resume Format */
-
-.resumecontainer {  
-	display: grid;
-	padding: 0 21vh;
-	grid-template-columns: 1fr 2.5fr;
-	grid-template-rows: 0.8fr;
-	gap: 0px 10vh;
-	grid-auto-flow: row;
-	grid-template-areas:
-    "Skillbar Resume";
-}
-
-.Resume { grid-area: Resume;}
-
-.Skillbar { grid-area: Skillbar;}
-
-
 /* Skillset */
 
 @keyframes load{ from { width: 0% } }
@@ -455,18 +407,6 @@ a.projectlink::after{
 	.icons{
 		font-size: 100%;
 	}
-	.resumecontainer {  
-		display: grid;
-		padding: 5vh;
-		justify-content: center;
-		grid-auto-flow: none;
-		grid-template-columns: auto;
-		grid-template-rows: auto;
-		gap: 0px;
-		grid-template-areas: 
-		"Resume"
-		"Skillbar"
-	}
 }
 
 @media screen and (max-device-width: 900px) {
@@ -484,13 +424,9 @@ a.projectlink::after{
 	padding: 3vh 0vh;
 	text-align: center;
   }
-  .resumecontainer {
-	padding-top: 0vh;
+  .overlay a {
+    font-size: 20px
   }
-}
-
-@media screen and (max-device-width: 900px) {
-  .overlay a {font-size: 20px}
   .overlay .closebtn {
   	font-size: 40px;
   	top: 15px;
