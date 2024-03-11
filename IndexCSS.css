@@ -242,6 +242,9 @@ a.projectlink::after{
 	.icons{
 		font-size: 100%;
 	}
+	 .projectContainer {
+    	 max-width: 100%;
+    }
 }
 
 @media screen and (max-device-width: 900px) {
