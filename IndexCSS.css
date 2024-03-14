@@ -134,10 +134,14 @@ a, a:visited, a:hover, a:active {
 
 .Skillbar { grid-area: Skillbar;}
 
- .projectContainer {
+.projectContainer {
 	 max-width: 60%;
 	 margin: 0 auto;
 	 padding: 20px;
+}
+
+.carousel {
+    padding-bottom: 3rem;
 }
 
 .carousel-caption h5, .carousel-caption p {
